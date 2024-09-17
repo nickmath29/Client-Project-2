@@ -9,10 +9,17 @@ Each Bio page must contain the information below
 
 Content required:
 Athelete Info:
-    Athlete name
+    Athlete name --> link to profile
     Athlete Grade
     Personal Record(PR)
 Race List:
-    Race Name
-    Race Date
+    Meet --> Meet details and summary
+    Date
+    Time
+Comments?
+Athlete?
+Coach?
+Photo?
+
+
 
