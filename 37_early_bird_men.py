@@ -2,7 +2,7 @@ import csv
 import html
 
 # Assuming 'linkSample' is the path to the CSV file
-csv_file = 'Client Data Files/meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv'
+csv_file = 'meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv'
 
 # Open the CSV file and extract the data
 with open(csv_file, newline='', encoding='utf-8') as file:
