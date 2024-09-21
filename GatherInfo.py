@@ -1,3 +1,5 @@
+import csv
+
 # Open the CSV file and extract the data
 with open(csv_file, newline='', encoding='utf-8') as file:
    reader = csv.reader(file)
