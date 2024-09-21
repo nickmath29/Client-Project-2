@@ -2,19 +2,18 @@ import csv
 import html
 
 # Assuming 'linkSample' is the path to the CSV file
-csv_file = 'Client-Data-Files/meets/37th_Early_Bird_Open_Womens_5000_Meters_HS_Open_5K_24.csv'
+csv_file = 'Client-Data-Files/meets/Bret_Clements_Bath_Invitational_Womens_5000_Meters_Class_1_24.csv'
 
 # Open the CSV file and extract the data
 with open(csv_file, newline='', encoding='utf-8') as file:
    reader = csv.reader(file)
    data = list(reader)
 
-
 # Extract meet information based on provided indices
 meet_name = data[0][0]  # Cell A1 - Meet Name
 meet_date = data[1][0]  # Cell A2 - Meet Date
 team_results_link = data[2][0]  # Cell A3 - hyperlink for the team-results section
-race_comments = " ".join(data[3][0:9])   # Row 4 - race-comments section
+race_comments = " ".join(data[3][0:6])   # Row 4 - race-comments section
 race_comments = html.escape(race_comments)  # Escape any special HTML characters
 
 # Extract team results starting from row 8 (index 7) assuming columns A, B, and C
@@ -30,7 +29,7 @@ for row in data[7:12]:  # Selecting first 3 rows of team results as requested
 
 # Extract athlete details starting from row 28 (index 27) assuming columns A to H
 athlete_results = []
-indices = [34, 66, 75, 84, 108]  # The indices of the sample rows
+indices = [23, 31, 42, 56, 63]  # The indices of the sample rows
 for i in indices:  # Selecting rows
    row = data[i] # Selecting athlete results as requested
    if len(row) >= 8:
@@ -143,17 +142,17 @@ html_content += '''
 
 # Add images from IMG_9022 to IMG_9026
 html_content += '<div>'
-for i in range(9022, 9027):
+for i in range(9096, 9101):
     html_content += f'''
-      <img src="Client-Data-Files/images/earlybird/IMG_{i}.jpg" alt="IMG_{i}" width="150" height="150" />
+      <img src="Client-Data-Files/images/bath/IMG_{i}.jpg" alt="IMG_{i}" width="150" height="150" />
     '''
 html_content += '</div>'
       
 # Add images from IMG_9030 to IMG_9034
 html_content += '<div>'
-for i in range(9030, 9035):
+for i in range(9102, 9107):
     html_content += f'''
-      <img src="Client-Data-Files/images/earlybird/IMG_{i}.jpg" alt="IMG_{i}" width="150" height="150" />
+      <img src="Client-Data-Files/images/bath/IMG_{i}.jpg" alt="IMG_{i}" width="150" height="150" />
     '''
 html_content += '</div>'
 
@@ -169,7 +168,7 @@ html_content += f'''
 </html>'''
 
 # Save the updated HTML content to a file
-output_html_file_path = 'meet_results_website_women.html'
+output_html_file_path = 'meet_results_Bath_Women.html'
 with open(output_html_file_path, 'w', encoding='utf-8') as file:
     file.write(html_content)
 

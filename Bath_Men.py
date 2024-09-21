@@ -30,7 +30,7 @@ for row in data[7:12]:  # Selecting first 3 rows of team results as requested
 
 # Extract athlete details starting from row 28 (index 27) assuming columns A to H
 athlete_results = []
-indices = [54, 66, 73, 84, 100]  # The indices of the sample rows
+indices = [46, 66, 73, 84, 100]  # The indices of the sample rows
 for i in indices:  # Selecting rows
    row = data[i] # Selecting athlete results as requested
    if len(row) >= 8:
@@ -143,7 +143,7 @@ html_content += '''
 
 # Add images from IMG_9022 to IMG_9026
 html_content += '<div>'
-for i in range(9022, 9027):
+for i in range(9096, 9101):
     html_content += f'''
       <img src="Client-Data-Files/images/bath/IMG_{i}.jpg" alt="IMG_{i}" width="150" height="150" />
     '''
@@ -151,7 +151,7 @@ html_content += '</div>'
       
 # Add images from IMG_9030 to IMG_9034
 html_content += '<div>'
-for i in range(9030, 9035):
+for i in range(9102, 9107):
     html_content += f'''
       <img src="Client-Data-Files/images/bath/IMG_{i}.jpg" alt="IMG_{i}" width="150" height="150" />
     '''
