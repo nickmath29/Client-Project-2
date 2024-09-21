@@ -2,12 +2,13 @@ import csv
 import html
 
 # Assuming 'linkSample' is the path to the CSV file
-csv_file = 'Client-Data-Files/meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv'
+csv_file = 'Client-Data-Files/meets/Bret_Clements_Bath_Invitational_Mens_5000_Meters_Class_1_24.csv'
 
 # Open the CSV file and extract the data
 with open(csv_file, newline='', encoding='utf-8') as file:
    reader = csv.reader(file)
    data = list(reader)
+
 
 # Extract meet information based on provided indices
 meet_name = data[0][0]  # Cell A1 - Meet Name
@@ -144,7 +145,7 @@ html_content += '''
 html_content += '<div>'
 for i in range(9022, 9027):
     html_content += f'''
-      <img src="Client-Data-Files/images/earlybird/IMG_{i}.jpg" alt="IMG_{i}" width="150" height="150" />
+      <img src="Client-Data-Files/images/bath/IMG_{i}.jpg" alt="IMG_{i}" width="150" height="150" />
     '''
 html_content += '</div>'
       
@@ -152,7 +153,7 @@ html_content += '</div>'
 html_content += '<div>'
 for i in range(9030, 9035):
     html_content += f'''
-      <img src="Client-Data-Files/images/earlybird/IMG_{i}.jpg" alt="IMG_{i}" width="150" height="150" />
+      <img src="Client-Data-Files/images/bath/IMG_{i}.jpg" alt="IMG_{i}" width="150" height="150" />
     '''
 html_content += '</div>'
 
@@ -168,7 +169,7 @@ html_content += f'''
 </html>'''
 
 # Save the updated HTML content to a file
-output_html_file_path = 'meet_results_website.html'
+output_html_file_path = 'meet_results_Bath_Men.html'
 with open(output_html_file_path, 'w', encoding='utf-8') as file:
     file.write(html_content)
 
