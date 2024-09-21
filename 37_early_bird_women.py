@@ -169,7 +169,7 @@ html_content += f'''
 </html>'''
 
 # Save the updated HTML content to a file
-output_html_file_path = 'meet_results_website.html'
+output_html_file_path = 'meet_results_website_women.html'
 with open(output_html_file_path, 'w', encoding='utf-8') as file:
     file.write(html_content)
 
