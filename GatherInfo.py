@@ -32,6 +32,7 @@ html_content = f'''<!DOCTYPE html>
    <link rel = "stylesheet" href = "css/style.css">
    <title>{meet_name} Country Meet</title>
 </head>
+
 <body>
 
 
