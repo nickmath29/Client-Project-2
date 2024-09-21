@@ -2,7 +2,7 @@ import csv
 import html
 
 # Assuming 'linkSample' is the path to the CSV file
-csv_file = 'meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv'
+csv_file = 'Client-Data-Files/meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv'
 
 # Open the CSV file and extract the data
 with open(csv_file, newline='', encoding='utf-8') as file:
@@ -100,7 +100,7 @@ for athlete in athlete_results:
          <td>{athlete['time']}</td>
          <td>{athlete['place']}</td>
          <td><a href="{athlete['team_link']}">{athlete['team']}</a></td>
-         <td><img src="Client Data Files/images/AthleteImages/{athlete['profile_pic']}" alt="{athlete['name']}'s picture" width="60px" height="80px"></td>
+         <td><img src="Client-Data-Files/images/AthleteImages/{athlete['profile_pic']}" alt="{athlete['name']}'s picture" width="60px" height="80px"></td>
       </tr>'''
 
 html_content += f'''
@@ -144,7 +144,7 @@ html_content += '''
 html_content += '<div>'
 for i in range(9022, 9027):
     html_content += f'''
-      <img src="Client Data Files/images/earlybird/IMG_{i}.jpg" alt="IMG_{i}" width="150" height="150" />
+      <img src="Client-Data-Files/images/earlybird/IMG_{i}.jpg" alt="IMG_{i}" width="150" height="150" />
     '''
 html_content += '</div>'
       
@@ -152,7 +152,7 @@ html_content += '</div>'
 html_content += '<div>'
 for i in range(9030, 9035):
     html_content += f'''
-      <img src="Client Data Files/images/earlybird/IMG_{i}.jpg" alt="IMG_{i}" width="150" height="150" />
+      <img src="Client-Data-Files/images/earlybird/IMG_{i}.jpg" alt="IMG_{i}" width="150" height="150" />
     '''
 html_content += '</div>'
 
