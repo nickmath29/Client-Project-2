@@ -66,18 +66,19 @@ html_content = f'''<!DOCTYPE html>
 <body>
 
 <header>
+   <nav>
+      <ul>
+         <li><a href="index.html">Home</a></li>
+         <li><a href="#athlete-results">Athlete Results</a></li>
+         <li><a href="#team-results">Team Results</a></li>
+         <li><a href="#overall-comments">Overall Comments</a></li>
+         <li><a href="#photo-gallery">Photo Gallery</a></li>
+      </ul>
+   </nav>
+   
    <h1>{meet_name}</h1>
    <h2>{meet_date}</h2>
 </header>
-
-<nav>
-   <ul>
-      <li><a href="#athlete-results">Athlete Results</a></li>
-      <li><a href="#team-results">Team Results</a></li>
-      <li><a href="#overall-comments">Overall Comments</a></li>
-      <li><a href="#photo-gallery">Photo Gallery</a></li>
-   </ul>
-</nav>
 
 <section id="athlete-results">
    <h2>Athlete Results</h2>
