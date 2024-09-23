@@ -101,7 +101,7 @@ for athlete in athlete_results:
          <td>{athlete['time']}</td>
          <td>{athlete['place']}</td>
          <td><a href="{athlete['team_link']}">{athlete['team']}</a></td>
-         <td><img src="Client-Data-Files/images/AthleteImages/{athlete['profile_pic']}" alt="{athlete['name']}'s picture" width="60px" height="80px"></td>
+         <td><img src="Client-Data-Files/images/AthleteImages/{athlete['profile_pic']}" alt="{athlete['name']}'s picture" width="60" height="80"></td>
       </tr>'''
 
 html_content += f'''
