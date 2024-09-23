@@ -1,7 +1,7 @@
 import csv
 import html
 
-# Assuming 'linkSample' is the path to the CSV file
+# Set the path to the CSV file
 csv_file = 'Client-Data-Files/meets/Bret_Clements_Bath_Invitational_Mens_5000_Meters_Class_1_24.csv'
 
 # Open the CSV file and extract the data
@@ -28,7 +28,7 @@ for row in data[7:12]:  # Selecting first 3 rows of team results as requested
          'score': score
       })
 
-# Extract athlete details starting from row 28 (index 27) assuming columns A to H
+# Extract athlete details
 athlete_results = []
 indices = [46, 66, 73, 84, 100]  # The indices of the sample rows
 for i in indices:  # Selecting rows
@@ -93,7 +93,7 @@ html_content = f'''<!DOCTYPE html>
          <th>Profile Picture</th>
       </tr>'''
 
-# Populate athlete results into the HTML table (first 3 rows)
+# Populate athlete results into the HTML table
 for athlete in athlete_results:
     html_content += f'''
       <tr>
@@ -119,7 +119,7 @@ html_content += f'''
          <th>Score</th>
       </tr>'''
 
-# Populate team results into the HTML table (first 5 rows)
+# Populate team results into the HTML table
 for result in team_results:
     html_content += f'''
       <tr>
@@ -142,7 +142,7 @@ html_content += '''
    <h2>Photo Gallery</h2>
 '''
 
-# Add images from IMG_9022 to IMG_9026
+# Add images from IMG_9096 to IMG_9100
 html_content += '<div>'
 for i in range(9096, 9101):
     html_content += f'''
@@ -150,7 +150,7 @@ for i in range(9096, 9101):
     '''
 html_content += '</div>'
       
-# Add images from IMG_9030 to IMG_9034
+# Add images from IMG_9102 to IMG_9106
 html_content += '<div>'
 for i in range(9102, 9107):
     html_content += f'''

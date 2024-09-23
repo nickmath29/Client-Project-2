@@ -1,7 +1,7 @@
 import csv
 import html
 
-# Assuming 'linkSample' is the path to the CSV file
+# Set the path to the CSV file
 csv_file = 'Client-Data-Files/meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv'
 
 # Open the CSV file and extract the data
@@ -18,7 +18,7 @@ race_comments = html.escape(race_comments)  # Escape any special HTML characters
 
 # Extract team results starting from row 8 (index 7) assuming columns A, B, and C
 team_results = []
-for row in data[7:12]:  # Selecting first 3 rows of team results as requested
+for row in data[7:12]:  # Selecting first 5 rows of team results as requested
    if len(row) >= 3:
       place, team, score = row[0], row[1], row[2]
       team_results.append({
@@ -27,7 +27,7 @@ for row in data[7:12]:  # Selecting first 3 rows of team results as requested
          'score': score
       })
 
-# Extract athlete details starting from row 28 (index 27) assuming columns A to H
+# Extract athlete details
 athlete_results = []
 indices = [54, 66, 73, 84, 100]  # The indices of the sample rows
 for i in indices:  # Selecting rows
@@ -92,7 +92,7 @@ html_content = f'''<!DOCTYPE html>
          <th>Profile Picture</th>
       </tr>'''
 
-# Populate athlete results into the HTML table (first 3 rows)
+# Populate athlete results into the HTML table
 for athlete in athlete_results:
     html_content += f'''
       <tr>
@@ -118,7 +118,7 @@ html_content += f'''
          <th>Score</th>
       </tr>'''
 
-# Populate team results into the HTML table (first 5 rows)
+# Populate team results into the HTML table 
 for result in team_results:
     html_content += f'''
       <tr>
